@@ -1,0 +1,131 @@
+@import "./general";
+
+.container {
+    max-width: 80%;
+    margin: auto;
+    padding: 20px 35px;
+
+    @media screen and (min-width: 1024px) {
+        max-width: 90%;
+        padding: 15px 30px;
+        margin: auto;
+    }
+}
+
+header {
+    .logo {
+        max-width: 50%;
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        width: 90%;
+        gap: 3em;
+    }
+
+    .illustration-img {
+        width: 100%;
+        padding: 25px 0;
+
+        @media screen and (min-width: 1024px) {
+            padding: 50px 0;
+            width: 60%;
+        }
+
+        .ill-img {
+            width: 100%;
+
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .text {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        line-height: 1.5em;
+        padding-bottom: 50px;
+
+        @media screen and (min-width: 1024px) {
+            width: 30%;
+            align-items: start;
+            text-align: start;
+            padding-right: 0;
+        }
+
+        h3 {
+            line-height: 1.5em;
+            padding-bottom: 10px;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            padding-bottom: 30px;
+        }
+    }
+
+    .register {
+        width: 60%;
+        padding: 9px 30px;
+        border-radius: 40px;
+        color: $violet;
+        background: $white;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+
+        @media screen and (min-width: 1024px) {
+            width: max-content;
+            padding-inline: 3rem;
+            display: flex;
+
+        }
+
+        &:hover {
+            background: $soft-magenta;
+            color: $white;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: end;
+    }
+
+    .icon {
+        width: 20px;
+        padding: 10px;
+        border: 1px solid $white;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            color: $soft-magenta;
+            border: 1px solid $soft-magenta;
+        }
+    }
+}
